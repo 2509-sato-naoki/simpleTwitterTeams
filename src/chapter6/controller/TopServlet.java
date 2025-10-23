@@ -18,6 +18,7 @@ import chapter6.service.MessageService;
 @WebServlet(urlPatterns = { "/index.jsp" })
 public class TopServlet extends HttpServlet {
 
+	//ブランチの変更です！
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
@@ -40,6 +41,7 @@ public class TopServlet extends HttpServlet {
         //返信コメントを表示する
         List<UserComment> comments = new CommentService().select();
 
+        request.setAttribute("searchWord", request.getParameter("word"));
         request.setAttribute("start", start);
         request.setAttribute("end", end);
         request.setAttribute("messages", messages);
