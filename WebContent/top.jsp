@@ -23,6 +23,16 @@
 		        <a href="logout">ログアウト</a>
 		    </c:if>
 		</div>
+
+		<div class = "search">
+			<form action = "./" action = "get">
+				つぶやき：
+				<input type = "text" name ="word" value = "${searchWord}"/>
+				<input type="radio" name="radiobutton" value="startFrom" checked="checked">
+				から始まる
+				<input type= "submit" value = "検索">
+			</form>
+		</div>
 		<c:if test="${ not empty loginUser }">
 		    <div class="profile">
 		        <div class="name"><h2><c:out value="${loginUser.name}" /></h2></div>
