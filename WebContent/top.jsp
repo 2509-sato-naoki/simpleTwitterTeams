@@ -23,7 +23,6 @@
 		        <a href="logout">ログアウト</a>
 		    </c:if>
 		</div>
-
 		<div class = "search">
 			<form action = "./" action = "get">
 				つぶやき：
